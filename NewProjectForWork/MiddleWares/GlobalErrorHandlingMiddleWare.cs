@@ -1,6 +1,5 @@
 ﻿    using Domain.Exceptions;
     using Shared.ErrorModels;
-    using System.ComponentModel.DataAnnotations;
     using System.Net;
 
     namespace NewProjectForWork.MiddleWares

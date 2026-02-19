@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Persistance.Data;
 using Persistance.Repositories;
+using Persistance.Seed;
 using Shared;
 using System.Text;
 
@@ -27,9 +28,10 @@ namespace NewProjectForWork.Extentions
                 option.User.RequireUniqueEmail = true;
             }).AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
             Services.AddScoped(typeof(IGenericRepository<,>), typeof(GenericRepository<,>));
-
+            Services.AddScoped<IAdminRepository, AdminRepository>();
             Services.AddScoped<IUnitOfWork, UnitOfWork>();
             Services.AddScoped<IUserRepository, UserRepository>();
+            Services.AddScoped<IAdminSeedService, AdminSeedService>();
             Services.ConfigureJWT(Configuration);
             return Services;
         }

@@ -1,9 +1,4 @@
-﻿using Domain.Contracts;
-using Domain.Entities.User;
-using Microsoft.AspNetCore.Identity;
-using Persistance.Data;
-
-namespace Persistance.Repositories
+﻿namespace Persistance.Repositories
 {
     public class UserRepository : IUserRepository
     {

@@ -11,6 +11,8 @@ namespace NewProjectForWork.Extensions
             services.AddScoped<IAuthenticationService, AuthenticationService>();
             services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<IServiceManager, ServiceManager>();
+            services.AddScoped<IAdminService, AdminService>();
+
             services.Configure<JwtOptions>(configuration.GetSection("JwtOptions"));
             services.AddAutoMapper(typeof(Services.AssemblyReference).Assembly);
 
