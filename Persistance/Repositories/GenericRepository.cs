@@ -1,10 +1,4 @@
-﻿
-using Domain.Contracts;
-using Domain.Entities;
-using Microsoft.EntityFrameworkCore;
-using Persistance.Data;
-
-namespace Persistance.Repositories
+﻿namespace Persistance.Repositories
 {
     public class GenericRepository<TEntity, Tkey> : IGenericRepository<TEntity, Tkey> where TEntity : BaseEntity<Tkey>
     {

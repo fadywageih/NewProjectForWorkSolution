@@ -1,0 +1,15 @@
+﻿global using Domain.Entities.Admin;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore.Metadata.Builders;
+global using Domain.Entities.User;
+global using Microsoft.AspNetCore.Identity;
+global using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+global using System.Reflection;
+global using Domain.Contracts;
+global using Persistance.Data;
+global using System.Security.Cryptography;
+global using System.Text;
+global using Domain.Entities;
+global using System.Collections.Concurrent;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Extensions.Logging;

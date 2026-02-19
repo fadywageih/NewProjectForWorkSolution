@@ -1,9 +1,4 @@
-﻿using Domain.Contracts;
-using Domain.Entities;
-using Persistance.Data;
-using System.Collections.Concurrent;
-
-namespace Persistance.Repositories
+﻿namespace Persistance.Repositories
 {
     public class UnitOfWork : IUnitOfWork
     {

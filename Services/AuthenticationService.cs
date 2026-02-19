@@ -1,21 +1,4 @@
-﻿using AutoMapper;
-using Domain.Contracts;
-using Domain.Entities.User;
-using Domain.Exceptions;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using Microsoft.IdentityModel.Tokens;
-using ServicesAbstraction;
-using Shared;
-using Shared.Dtos;
-using Shared.Dtos.User;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
-using System.Web;
-
-namespace Services
+﻿namespace Services
 {
     public class AuthenticationService : IAuthenticationService
     {
@@ -211,9 +194,6 @@ namespace Services
 
             try
             {
-                // Note: Angular's ActivatedRoute.queryParams automatically URL-decodes parameters
-                // so the token we receive here is already properly decoded.
-                // We can use it directly with UserManager.ResetPasswordAsync()
                 _logger.LogInformation("Using token: {FirstChars}...",
                     token.Length > 50 ? token.Substring(0, 50) : token);
                 _logger.LogInformation("Token length: {Length}", token.Length);
@@ -242,7 +222,6 @@ namespace Services
 
         private string GetFrontendBaseUrl()
         {
-            // You can get this from configuration
             return "http://localhost:4200";
         }
         private string BuildResetPasswordEmailBody(string? userName, string resetLink)

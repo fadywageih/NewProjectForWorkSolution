@@ -1,1 +1,19 @@
-﻿
+﻿global using AutoMapper;
+global using Domain.Entities.User;
+global using Shared.Dtos;
+global using Shared.Dtos.User;
+global using Domain.Contracts;
+global using Domain.Entities.Admin;
+global using Domain.Exceptions;
+global using Microsoft.AspNetCore.Http;
+global using Microsoft.Extensions.Logging;
+global using Microsoft.Extensions.Options;
+global using Microsoft.IdentityModel.Tokens;
+global using ServicesAbstraction;
+global using Shared;
+global using Shared.Dtos.Admin;
+global using System.IdentityModel.Tokens.Jwt;
+global using System.Security.Claims;
+global using System.Security.Cryptography;
+global using System.Text;
+global using Microsoft.AspNetCore.Identity;
